@@ -1034,9 +1034,14 @@ form .btn2{
     margin-top: 0;
     text-align: center;
   }
-
+  }
+@media (max-width: 600px) {
   .skill-bar {
-    width: 150px;
+    width: 250px;  /* or your preferred width */
     height: 15px;
+    margin: 20 auto;  /* centers skill bars */
+    display: block; 
+    margin-left: 25px; /* ensures margin auto works */
   }
 }
+
