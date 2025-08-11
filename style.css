@@ -1021,7 +1021,7 @@ form .btn2{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
     padding: 10px 15px;
   }
   
@@ -1044,6 +1044,7 @@ form .btn2{
     margin-left: 25px; /* ensures margin auto works */
   }
 }
+
 
 
 
