@@ -1010,9 +1010,8 @@ form .btn2{
         background: var(--hover-color);
         box-shadow: var(--neon-bar-shadow);
     }
-
  }
-/* Your existing CSS here */
+ /* Your existing CSS here */
 
 /* Add this at the end */
 @media (max-width: 600px) {
@@ -1021,43 +1020,30 @@ form .btn2{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
     padding: 10px 15px;
   }
   
   .home-section img {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     max-width: 150px;
-    top:-30px
-    position: relative;
   }
-}
-
 
   .home-intro {
     margin-top: 0;
     text-align: center;
   }
-  }
+
+}
 @media (max-width: 600px) {
   .skill-bar {
     width: 250px;  /* or your preferred width */
-    height: 20px;
+    height: 15px;
     margin: 20 auto;  /* centers skill bars */
     display: block; 
     margin-left: 25px; /* ensures margin auto works */
   }
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
