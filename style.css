@@ -1027,6 +1027,7 @@ form .btn2{
   .home-section img {
     margin-bottom: 10px;
     max-width: 150px;
+    top: -20px; 
   }
 
   .home-intro {
@@ -1044,6 +1045,7 @@ form .btn2{
     margin-left: 25px; /* ensures margin auto works */
   }
 }
+
 
 
 
