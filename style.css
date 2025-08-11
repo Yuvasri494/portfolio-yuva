@@ -1037,13 +1037,14 @@ form .btn2{
   }
 @media (max-width: 600px) {
   .skill-bar {
-    width: 250px;  /* or your preferred width */
-    height: 15px;
+    width: 290px;  /* or your preferred width */
+    height: 20px;
     margin: 20 auto;  /* centers skill bars */
     display: block; 
     margin-left: 25px; /* ensures margin auto works */
   }
 }
+
 
 
 
