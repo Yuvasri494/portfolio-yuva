@@ -1011,30 +1011,6 @@ form .btn2{
         box-shadow: var(--neon-bar-shadow);
     }
  }
- /* Your existing CSS here */
-
-/* Add this at the end */
-@media (max-width: 600px) {
-  /* Mobile specific fixes */
-  .home-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 15px;
-  }
-  
-  .home-section img {
-    margin-bottom: 30px;
-    max-width: 150px;
-    top: -40px; 
-  }
-
-  .home-intro {
-    margin-top: 0;
-    text-align: center;
-  }
-
-}
 @media (max-width: 600px) {
   .skill-bar {
     width: 250px;  /* or your preferred width */
@@ -1044,27 +1020,8 @@ form .btn2{
     margin-left: 25px; /* ensures margin auto works */
   }
 }
-@media (max-width: 600px) {
-  .home-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px; /* very small gap between items */
-    padding: 10px 15px;
-  }
 
-  .home-photo {
-    margin-top: -30px !important; /* pull image upward strongly */
-    margin-bottom: 5px !important;
-    max-width: 150px;
-    display: block;
-  }
 
-  .home-intro {
-    margin-top: 0 !important;
-    text-align: center;
-  }
-}
 
 
 
