@@ -1023,7 +1023,7 @@ form .btn2{
 }
 @media only screen and (max-width: 768px) {
   .myimg {
-    margin-top: -40px; /* move image up */
+    margin-top: -80px; /* move image up */
     margin-bottom: 20px; /* small bottom margin */
     margin-left: auto;
     margin-right: auto;
@@ -1034,6 +1034,7 @@ form .btn2{
     text-align: center;
   }
 }
+
 
 
 
