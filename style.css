@@ -530,8 +530,8 @@ form .btn2{
     
     /* Hero image - major repositioning */
     .myimg {
-        width: 350px;
-        height: 350px;
+        width: 280px;
+        height: 280px;
         position: static;
         float: none;
         margin: 30px auto;
@@ -1045,6 +1045,7 @@ form .btn2{
     margin-left: 25px; /* ensures margin auto works */
   }
 }
+
 
 
 
