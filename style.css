@@ -568,6 +568,7 @@ form .btn2{
     .about-col-1 img {
         width: 80%;
         max-width: 300px;
+        margin-bottom:2px
     }
     
     .about-col-2 {
@@ -1033,6 +1034,7 @@ form .btn2{
     text-align: center;
   }
 }
+
 
 
 
