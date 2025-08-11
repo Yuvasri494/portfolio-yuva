@@ -525,7 +525,7 @@ form .btn2{
     }
     
     .header-text p {
-        font-size: 78px;
+        font-size: 38px;
     }
     
     /* Hero image - major repositioning */
@@ -535,7 +535,7 @@ form .btn2{
         position: static;
         float: none;
         margin: 30px auto;
-        top: auto;
+        top: -20px;
         left: auto;
         display: block;
     }
@@ -1045,6 +1045,7 @@ form .btn2{
     margin-left: 25px; /* ensures margin auto works */
   }
 }
+
 
 
 
