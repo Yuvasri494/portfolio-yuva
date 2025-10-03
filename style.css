@@ -134,8 +134,6 @@ body {
     display: flex;
     align-items: center;
     gap: 15px;
-
-
 }
 
 .logo {
@@ -878,7 +876,7 @@ body {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background: conic-gradient(rgba(255, 255, 255, 0.1) 0deg);
+    background: conic-gradient(rgba(255, 255, 255, 0.1) 0deg, rgba(255, 255, 255, 0.1) 360deg);
     display: flex;
     align-items: center;
     justify-content: center;
