@@ -723,26 +723,31 @@ function animateCircularSkills() {
     
     circularSkills.forEach((skill, index) => {
         const percentage = parseInt(skill.getAttribute('data-percentage'));
-        let currentPercentage = ;
+        let currentPercentage = 0;
         
         // Get the text element and store original label
         const textElement = skill.querySelector('.circle-text');
-        const originalLabel = textElement.textContent.trim();
+        const originalLabel = textElement.textContent.replace(/\d+%/g, '').trim();
         
         // Start animation with delay based on index
         setTimeout(() => {
             const interval = setInterval(() => {
                 if (currentPercentage >= percentage) {
                     clearInterval(interval);
+                    // Final state to ensure it reaches exact percentage
+                    skill.style.background = `conic-gradient(
+                        var(--primary) 0deg ${percentage * 3.6}deg,
+                        rgba(255, 255, 255, 0.1) ${percentage * 3.6}deg 360deg
+                    )`;
+                    textElement.innerHTML = `${percentage}%<br><small>${originalLabel}</small>`;
                 } else {
                     currentPercentage += 1;
                     
                     // Create gradient that fills based on percentage
-                    // Primary color from 0 to current percentage
-                    // Gray color from current percentage to 360
+                    const degree = currentPercentage * 3.6;
                     skill.style.background = `conic-gradient(
-                        var(--primary) ${currentPercentage * 3.6}deg,
-                        rgba(255, 255, 255, 0.1) ${currentPercentage * 3.6}deg
+                        var(--primary) 0deg ${degree}deg,
+                        rgba(255, 255, 255, 0.1) ${degree}deg 360deg
                     )`;
                     
                     // Update percentage text
@@ -755,7 +760,15 @@ function animateCircularSkills() {
 
 // ===== TRIGGER SKILLS ANIMATION ON MOUSE ENTER =====
 document.addEventListener('DOMContentLoaded', () => {
-    const skillsSection = document.getElementById('skill');
+    const skillsSection = document.getElementById('skills');
+    
+    // Initialize circular skills with 0%
+    const circularSkills = document.querySelectorAll('.circular-skill');
+    circularSkills.forEach(skill => {
+        const textElement = skill.querySelector('.circle-text');
+        const originalLabel = textElement.textContent.trim();
+        textElement.innerHTML = `0%<br><small>${originalLabel}</small>`;
+    });
     
     if (skillsSection) {
         skillsSection.addEventListener('mouseenter', () => {
@@ -1212,6 +1225,7 @@ document.addEventListener('DOMContentLoaded', () => {
     </script>
 </body>
 </html>
+
 
 
 
