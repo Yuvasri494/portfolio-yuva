@@ -2,395 +2,1205 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=  , initial-scale=1.0">
-    <title>yuva portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuvasri - Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/909c5fc6ae.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
-    <div id="header">
-        <div class="container">
-           <nav>
-    <img src="log2 .jpeg" class="logo">
-    
-    <!-- Hamburger menu icon (hidden on desktop) -->
-    <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+    <canvas id="particles"></canvas>
 
-    <ul id="sidemenu">
-        <li><a href="#header">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Service</a></li>
-        <li><a href="#portfolio">Works</a></li>
-        <li><a href="#skill">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <!-- Close icon for mobile menu -->
-        <i class="fas fa-times" id="close-menu"></i>
-    </ul>
-</nav>
-            <div class="hero"></div>
-            <div class="header-text">
-                <p>FULL STACK 
-                    web developer
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="log2 .jpeg" alt="Logo" class="logo">
+            <span class="logo-text">Yuvasri</span>
+        </div>
+        
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#portfolio" class="nav-link">Works</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-subtitle" data-aos="fade-up">FULL STACK WEB DEVELOPER</p>
+                <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+                    Hello!, I'm <br>
+                    <span class="gradient-text typed-text"></span>
+                    <span class="cursor-blink">|</span>
+                </h1>
+                <p class="hero-description" data-aos="fade-up" data-aos-delay="200">
+                    Crafting digital experiences with creativity & innovation
                 </p>
-                <h1>Hello!, I'm <br><span>Yuvasri</span></h1>
+                <div class="hero-buttons" data-aos="fade-up" data-aos-delay="300">
+                    <a href="#portfolio" class="btn-primary glow-effect">View My Work</a>
+                    <a href="#contact" class="btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-image" data-aos="fade-left" data-aos-delay="400">
+                <div class="image-wrapper">
+                    <img src="Untitled design (1).jpg" alt="Yuvasri">
+                    <div class="image-glow"></div>
+                </div>
             </div>
         </div>
-        
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+            <p>Scroll Down</p>
+        </div>
+    </section>
 
-    </div>
-    <div class="myimg">
-        <img src="Untitled design (1).jpg" alt="">
-    </div>
-
-    <div id="about">
+    <!-- About Section -->
+    <section id="about" class="about-section">
         <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="IMG-20250310-WA0026.jpg">
+            <h2 class="section-title" data-aos="fade-up">About Me</h2>
+            <div class="about-content">
+                <div class="about-image" data-aos="fade-right">
+                    <div class="image-frame">
+                        <img src="IMG-20250310-WA0026.jpg" alt="About Yuvasri">
+                        <div class="frame-border"></div>
+                    </div>
                 </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p class="abome">Hey there!<br><br>I'm Yuvasri, a dedicated and enthusiastic Computer Science Engineering student with a passion for technology, creativity, and leadership. With strong communication and team collaboration skills, I've successfully lead events like GRT TEXPO'24 as a Paper Presentation Coordinator and actively participated in national-level hackathons and presentation. I beleive in leading with empathy and motivating my team to bring out their best. Every project I take is a step towards blending innovation with impact. Let's connect, collaborate, and create something awesome!</p>
-                        <div class="tab-titles">
-                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                <div class="about-text" data-aos="fade-left">
+                    <h3>Hey there! 👋</h3>
+                    <p>I'm <strong>Yuvasri</strong>, a dedicated and enthusiastic Computer Science Engineering student with a passion for technology, creativity, and leadership.</p>
+                    <p>With strong communication and team collaboration skills, I've successfully led events like GRT TEXPO'24 as a Paper Presentation Coordinator and actively participated in national-level hackathons and presentations.</p>
+                    <p>I believe in leading with empathy and motivating my team to bring out their best. Every project I take is a step towards blending innovation with impact.</p>
+                    <p class="highlight">Let's connect, collaborate, and create something awesome! 🚀</p>
+
+                    <div class="tab-container">
+                        <div class="tab-buttons">
+                            <button class="tab-btn active" data-tab="skills">Skills</button>
+                            <button class="tab-btn" data-tab="experience">Experience</button>
+                            <button class="tab-btn" data-tab="education">Education</button>
                         </div>
-                        <div class="tab-contents active-tab" id="tab-skills">
-                            <ul>
-                                <li><span>Web Design</span><br>Designing Web/App interface</li>
-                                <li><span>UI/UX</span><br>Designing Web/App interface</li>
-                                <li><span>Generative AI</span><br>Designing AI chat box</li>
 
-
+                        <div class="tab-content active" id="skills">
+                            <ul class="info-list">
+                                <li>
+                                    <i class="fas fa-code"></i>
+                                    <div>
+                                        <strong>Web Design</strong>
+                                        <p>Designing Web/App interfaces</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-palette"></i>
+                                    <div>
+                                        <strong>UI/UX</strong>
+                                        <p>Creating intuitive user experiences</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-robot"></i>
+                                    <div>
+                                        <strong>Generative AI</strong>
+                                        <p>Designing AI chatbots</p>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
-                        <div class="tab-contents" id="experience">
-                            <ul>
-                                <li><span>Interpe Intern</span><br>completed 1 month Internship in Python</li>
-                                <li><span>Techno Hack Intern</span><br>completed 1 month Internship in Web Development</li>
-                                <li><span>Certification course</span><br>Completed Post Graduate Diploma In Computer application</li>
-                                <li><span>Inetz technology</span><br>Completed 1month internsgip in web development</li>
 
-
-
+                        <div class="tab-content" id="experience">
+                            <ul class="info-list">
+                                <li>
+                                    <i class="fas fa-briefcase"></i>
+                                    <div>
+                                        <strong>Interpe Intern</strong>
+                                        <p>1 month internship in Python</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-briefcase"></i>
+                                    <div>
+                                        <strong>Techno Hack Intern</strong>
+                                        <p>1 month internship in Web Development</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-certificate"></i>
+                                    <div>
+                                        <strong>Certification Course</strong>
+                                        <p>Post Graduate Diploma in Computer Application</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-briefcase"></i>
+                                    <div>
+                                        <strong>Inetz Technology</strong>
+                                        <p>1 month internship in Web Development</p>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
-                        <div class="tab-contents" id="education">
-                            <ul> 
-                                <li><span>2022</span><br>Complted schooling in St mary's matric higher secoundary school,pallipet</li>
-                                <li><span>2026</span><br>Completed B.E Computer science engineering in GRT Institute of engineering and technology</li>
-                                
 
-
+                        <div class="tab-content" id="education">
+                            <ul class="info-list">
+                                <li>
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <div>
+                                        <strong>2022</strong>
+                                        <p>St Mary's Matric Higher Secondary School, Pallipet</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <div>
+                                        <strong>2026</strong>
+                                        <p>B.E Computer Science Engineering - GRT Institute of Engineering and Technology</p>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
-
-                        
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-------------------services------------------------------>
-    <div id="services">
-        <div class="container">
-            <h1 class="sub-title">My Services</h1>
-            <div class="services-list">
-               <div>
-                <i class="fa-solid fa-users-between-lines" style="color: #dfbb07;"></i>
-                <h2>Web Design</h2>
-                <p>Designing responsive and modern website with a strong focus on user experience,clean UI, and inclusive accessibility</p>
-                <a href="#">Learn more</a>
-               </div> 
-               <div>
-                <i class="fa-solid fa-dice-d20" style="color: #0cedde;"></i>
-                <h2>UI/UX Design</h2>
-                <p>I design clean, engaging, and user-friendly interfaces that enhance digital experiences and bring ideas to life</p>
-                <a href="#">Learn more</a>
-               </div>
-               <div>
-                <i class="fa-solid fa-robot" style="color: #f2267f;"></i>
-                <h2>Generative AI</h2>
-                <p>An AI-powered chatbox that talks, thinks, and learns—bringing real-time conversations to life with the power of generative intelligence</p>
-                <a href="#">Learn more</a>
-               </div>
-            </div>
-            
-       
-        </div>
-    </div>
-    <!--------------------------portfolio---------------------->
-    <div id="portfolio">
-        <div class="container">
-            <h1 class="sub-title">My Work</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img  src="travel.jpg">
-                    <div class="layer">
-                        <h3>Bontrip</h3>
-                        <p>Born to explore? Born Trip is your perfect travel buddy! Discover hidden gems, plan dreamy getaways, and make every trip unforgettable.Your next adventure starts here</p>
-                        <!-------------------------------------add link of your works----------------->
-                        <a href="https://yuvasri494.github.io/travel-Bontrips/"><i class="fa-solid fa-up-right-from-square" style="color: #075ea2;"></i></a>
                     </div>
-
-                    
-                </div>
-                <div class="work">
-                    <img src="chtbot.jpeg">
-                    <div class="layer">
-                        <h3>AI chatbot</h3>
-                        <p>Here I have created a AI chatbot where we can interact with AI to checking symptoms looking for basic medical advice or tracking your wellness</p>
-                        <a href="https://glistening-mousse-ede20e.netlify.app/"><i class="fa-solid fa-up-right-from-square" style="color: #075ea2;"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="ui.jpeg">
-                    <div class="layer">
-                        <h3>Simple Login page</h3>
-                        <p>This project might be simple, but it’s a small step in building a strong foundation for larger, more complex web applications,I’ve built a clean and minimal Login Page using only HTML & CSS.</p>
-                        <a href="https://yuvasri494.github.io/login-page/"><i class="fa-solid fa-up-right-from-square" style="color: #075ea2;"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="netflix.jpeg">
-                    <div class="layer">
-                        <h3>CineFlex</h3>
-                        <p>It is a front end web application inspired by Netflix,designed to deliver smooth,responsive and visually engaging movie-streaming experience</p>
-                        <a href="#"><i class="fa-solid fa-up-right-from-square" style="color: #075ea2;"></i></a>
-                    </div>
-                </div>
-            </div>
-            <a href="#" class="btn">See more</a>
-        </div>
-
-    </div>
-    <!--------------------------------myskills------------------------->
-    <section id="skill" class="container">
-        
-            <h1 class="sub-title">My Skills</h1>
-
-
-        <div class="skill-main">
-            <div class="skill-left">
-                <h2 class="sub-title1">Technical Skills</h2>
-                <div class="skill-bar">
-                    <div class="info">
-                        <p>HTML</p>
-                        <P>80%</P>
-                    </div>
-                    <div class="bar">
-                        <span class="html"></span>
-                    </div>
-                 </div>
-                <div class="skill-bar">
-                    <div class="info">
-                        <p>CSS</p>
-                        <P>75%</P>
-                    </div>
-                    <div class="bar">
-                        <span class="css"></span>
-                    </div>
-                </div>
-                <div class="skill-bar">
-                    <div class="info">
-                        <p>JAVA SCRIPT</p>
-                        <P>60%</P>
-                    </div>
-                    <div class="bar">
-                        <span class="javascript"></span>
-                    </div>
-                 </div>
-                <div class="skill-bar">
-                    <div class="info">
-                        <p>PYTHON</p>
-                        <P>80%</P>
-                    </div>
-                    <div class="bar">
-                        <span class="python"></span>
-                    </div>
-                </div>
-                <div class="skill-bar">
-                    <div class="info">
-                        <p>JAVA</p>
-                        <P>60%</P>
-                    </div>
-                    <div class="bar">
-                        <span class="java"></span>
-                    </div>
-                </div>
-                <div class="skill-bar">
-                    <div class="info">
-                        <p>FIGMA</p>
-                        <P>90%</P>
-                    </div>
-                    <div class="bar">
-                        <span class="figma"></span>
-                    </div>
-                </div> 
-                 
-            </div>
-            <div class="skill-right">
-                <h2 class="sub-title1">Professional Skills</h2>
-                <div class="professional">
-                    <div class="right-side">
-                        <div class="skills-grid">
-                          <div class="skill" data-percentage="80" data-label="Communication"></div>
-                          <div class="skill" data-percentage="95" data-label="Team Work"></div>
-                          <div class="skill" data-percentage="90" data-label="Creativity"></div>
-                          <div class="skill" data-percentage="85" data-label="Problem Solving"></div>
-                        </div>
-                      </div>
-                      
-                      
-
                 </div>
             </div>
         </div>
     </section>
-    <!-----------------contact------------------------>
-    <div id="contact">
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
         <div class="container">
-        <div class="row">
-            <div class="contact-left">
-             <h1 class="sub-title">Contact Me</h1>
-             <p><i class="fa-solid fa-paper-plane"></i>yuvas5466@gmail.com</p>
-             <p><i class="fa-solid fa-phone-volume"></i>0000000000</p>
-             <div class="social-icons">
-                <a href=""><i class="fa-brands fa-facebook"></i></a>
-                <a href=""><i class="fa-brands fa-square-x-twitter"></i></a>
-                <a href="https://www.instagram.com/yuvasri_govindarajan?igsh=MTR2N3hrOHpyZGNrbQ=="><i class="fa-brands fa-square-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/yuvasri-govindarajan-530a65294/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BRVEhdPiMQHeZU6Gvi2i7EQ%3D%3D"><i class="fa-brands fa-linkedin"></i></a>
-             </div>
-             <a href="Yuva resume.FINALE (5).docx" download class="btn btn2">Download CV</a>   
+            <h2 class="section-title" data-aos="fade-up">My Services</h2>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3>Web Design</h3>
+                    <p>Designing responsive and modern websites with a strong focus on user experience, clean UI, and inclusive accessibility</p>
+                    <div class="service-hover"></div>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>I design clean, engaging, and user-friendly interfaces that enhance digital experiences and bring ideas to life</p>
+                    <div class="service-hover"></div>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <h3>Generative AI</h3>
+                    <p>An AI-powered chatbot that talks, thinks, and learns—bringing real-time conversations to life with generative intelligence</p>
+                    <div class="service-hover"></div>
+                </div>
             </div>
-            <div class="contact-right">
-                <form>
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Name" placeholder="Your Email" required>
-                    <textarea name="message" rows="6" placeholder="Your message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
-                </form>
-            </div>
-        </div>    
         </div>
-    </div>
-    
-        
-    
-        
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">My Work</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="portfolio-image">
+                        <img src="travel.jpg" alt="Bontrip">
+                        <div class="portfolio-overlay">
+                            <h3>Bontrip</h3>
+                            <p>Born to explore? Born Trip is your perfect travel buddy! Discover hidden gems, plan dreamy getaways, and make every trip unforgettable.</p>
+                            <a href="https://yuvasri494.github.io/travel-Bontrips/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="portfolio-image">
+                        <img src="chtbot.jpeg" alt="AI Chatbot">
+                        <div class="portfolio-overlay">
+                            <h3>AI Chatbot</h3>
+                            <p>An AI chatbot where we can interact with AI for checking symptoms, looking for basic medical advice, or tracking wellness.</p>
+                            <a href="https://yuvasri494.github.io/rural-healthcare-ai-agent/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="portfolio-image">
+                        <img src="ui.jpeg" alt="Login Page">
+                        <div class="portfolio-overlay">
+                            <h3>Simple Login Page</h3>
+                            <p>A clean and minimal Login Page using HTML & CSS. A small step in building a strong foundation for larger web applications.</p>
+                            <a href="https://yuvasri494.github.io/login-page/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="portfolio-image">
+                        <img src="netflix.jpeg" alt="CineFlex">
+                        <div class="portfolio-overlay">
+                            <h3>CineFlex</h3>
+                            <p>A front-end web application inspired by Netflix, designed to deliver a smooth, responsive, and visually engaging movie-streaming experience.</p>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">My Skills</h2>
+            <div class="skills-container">
+                <div class="technical-skills" data-aos="fade-right">
+                    <h3>Technical Skills</h3>
+                    <div class="skill-bars">
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>HTML</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-fill" data-progress="80"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>CSS</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-fill" data-progress="75"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>JavaScript</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-fill" data-progress="80"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>Python</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-fill" data-progress="80"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>Java</span>
+                                <span>60%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-fill" data-progress="60"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>Figma</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-fill" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>Bootstrap</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-fill" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>Tailwind CSS</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-fill" data-progress="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>React.js</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-fill" data-progress="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="professional-skills" data-aos="fade-left">
+                    <h3>Professional Skills</h3>
+                    <div class="circular-skills">
+                        <div class="circular-skill" data-percentage="80">
+                            <div class="circle-text">Communication</div>
+                        </div>
+                        <div class="circular-skill" data-percentage="95">
+                            <div class="circle-text">Team Work</div>
+                        </div>
+                        <div class="circular-skill" data-percentage="90">
+                            <div class="circle-text">Creativity</div>
+                        </div>
+                        <div class="circular-skill" data-percentage="85">
+                            <div class="circle-text">Problem Solving</div>
+                        </div>
+                        <div class="circular-skill" data-percentage="80">
+                            <div class="circle-text">Critical Thinking</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3>Let's Connect!</h3>
+                    <p>Have a project in mind or just want to chat? Feel free to reach out!</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <p>yuvas5466@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Phone</strong>
+                                <p>7904414424</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/yuvasri_govindarajan" target="_blank" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/yuvasri-govindarajan-530a65294" target="_blank" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+
+                    <a href="Yuva resume.FINALE (5).docx" download class="btn-primary download-btn">
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
+                </div>
+
+                <div class="contact-form" data-aos="fade-left">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary submit-btn">
+                            Send Message <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Yuvasri. Crafted with <i class="fas fa-heart"></i> and lots of coffee ☕</p>
+    </footer>
+
     <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
+// ===== CUSTOM CURSOR =====
+const cursorDot = document.querySelector('.cursor-dot');
+const cursorOutline = document.querySelector('.cursor-outline');
 
-        function opentab(tabname){
-            for(tablink of tablinks){
-                tablink.classList.remove("active-link");
-            }
-            for(tabcontent of tabcontents){
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
+window.addEventListener('mousemove', (e) => {
+    const posX = e.clientX;
+    const posY = e.clientY;
+    
+    cursorDot.style.left = `${posX}px`;
+    cursorDot.style.top = `${posY}px`;
+    
+    cursorOutline.animate({
+        left: `${posX}px`,
+        top: `${posY}px`
+    }, { duration: 500, fill: 'forwards' });
+});
 
-        document.querySelectorAll('.skill').forEach(skill => {
-  const percent = parseInt(skill.getAttribute('data-percentage'));
-  const label = skill.getAttribute('data-label');
+// Cursor hover effect on links and buttons
+document.querySelectorAll('a, button').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+        cursorOutline.style.transform = 'scale(1.5)';
+        cursorOutline.style.borderColor = 'var(--secondary)';
+    });
+    el.addEventListener('mouseleave', () => {
+        cursorOutline.style.transform = 'scale(1)';
+        cursorOutline.style.borderColor = 'var(--primary)';
+    });
+});
 
-  const outer = document.createElement('div');
-  outer.className = 'outer-circle';
+// ===== PARTICLES ANIMATION =====
+const canvas = document.getElementById('particles');
+const ctx = canvas.getContext('2d');
 
-  const inner = document.createElement('div');
-  inner.className = 'inner-circle';
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
-  const text = document.createElement('div');
-  text.className = 'skill-text';
-  text.textContent = "0%";
+let particlesArray = [];
+const numberOfParticles = 100;
 
-  const labelText = document.createElement('div');
-  labelText.className = 'skill-label';
-  labelText.textContent = label;
-
-  inner.appendChild(text);
-  outer.appendChild(inner);
-  skill.appendChild(outer);
-  skill.appendChild(labelText);
-
-  // Animate fill and counter
-  let current = 0;
-  const speed = 80; // lower is faster (controls animation speed)
-  const increment = percent / 300; // Increment by the percentage step
-
-  // Start the animation
-  const interval = setInterval(() => {
-    if (current >= percent) {
-      clearInterval(interval); // Stop when we reach the target percentage
-    } else {
-      current += increment; // Increase percentage
-      current = Math.min(current, percent); // Avoid going beyond the target
-      text.textContent = `${Math.round(current)}%`; // Update text
-
-      // Apply the progress to the outer circle's conic-gradient
-      outer.style.background = `conic-gradient(cyan 0% ${Math.round(current)}%, #e5e7eb ${Math.round(current)}%)`;
+class Particle {
+    constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2 + 1;
+        this.speedX = Math.random() * 1 - 0.5;
+        this.speedY = Math.random() * 1 - 0.5;
     }
-  }, speed);
-});
+    
+    update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
         
+        if (this.x > canvas.width || this.x < 0) {
+            this.speedX = -this.speedX;
+        }
+        if (this.y > canvas.height || this.y < 0) {
+            this.speedY = -this.speedY;
+        }
+    }
+    
+    draw() {
+        ctx.fillStyle = 'rgba(0, 245, 255, 0.5)';
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+    }
+}
 
-    </script>
-    <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const hamburger = document.getElementById('hamburger');
-    const sideMenu = document.getElementById('sidemenu');
-    const closeMenu = document.getElementById('close-menu');
-    const body = document.body;
+function init() {
+    particlesArray = [];
+    for (let i = 0; i < numberOfParticles; i++) {
+        particlesArray.push(new Particle());
+    }
+}
+
+function connectParticles() {
+    for (let i = 0; i < particlesArray.length; i++) {
+        for (let j = i; j < particlesArray.length; j++) {
+            const dx = particlesArray[i].x - particlesArray[j].x;
+            const dy = particlesArray[i].y - particlesArray[j].y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+            
+            if (distance < 120) {
+                ctx.strokeStyle = `rgba(0, 245, 255, ${1 - distance / 120})`;
+                ctx.lineWidth = 0.5;
+                ctx.beginPath();
+                ctx.moveTo(particlesArray[i].x, particlesArray[i].y);
+                ctx.lineTo(particlesArray[j].x, particlesArray[j].y);
+                ctx.stroke();
+            }
+        }
+    }
+}
+
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     
-    // Toggle menu when hamburger is clicked
-    hamburger.addEventListener('click', function() {
-        sideMenu.classList.toggle('active');
-        hamburger.classList.toggle('active');
-        body.classList.toggle('menu-open');
+    particlesArray.forEach(particle => {
+        particle.update();
+        particle.draw();
     });
     
-    // Close menu when close icon is clicked
-    closeMenu.addEventListener('click', function() {
-        sideMenu.classList.remove('active');
+    connectParticles();
+    requestAnimationFrame(animate);
+}
+
+init();
+animate();
+
+window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    init();
+});
+
+// ===== HAMBURGER MENU =====
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('navMenu');
+const navLinks = document.querySelectorAll('.nav-link');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+});
+
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
         hamburger.classList.remove('active');
-        body.classList.remove('menu-open');
+        navMenu.classList.remove('active');
     });
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+    }
+});
+
+// ===== TYPING EFFECT =====
+const typedText = document.querySelector('.typed-text');
+const words = ['Yuvasri', 'a Developer', 'a Designer', 'an Innovator'];
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function type() {
+    const currentWord = words[wordIndex];
     
-    // Close menu when clicking on a nav link
-    const navLinks = sideMenu.querySelectorAll('a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            sideMenu.classList.remove('active');
-            hamburger.classList.remove('active');
-            body.classList.remove('menu-open');
-        });
-    });
+    if (isDeleting) {
+        typedText.textContent = currentWord.substring(0, charIndex - 1);
+        charIndex--;
+    } else {
+        typedText.textContent = currentWord.substring(0, charIndex + 1);
+        charIndex++;
+    }
     
-    // Close menu when clicking outside (optional)
-    document.addEventListener('click', function(event) {
-        const isClickInsideNav = sideMenu.contains(event.target) || hamburger.contains(event.target);
+    if (!isDeleting && charIndex === currentWord.length) {
+        isDeleting = true;
+        setTimeout(type, 2000);
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        setTimeout(type, 500);
+    } else {
+        setTimeout(type, isDeleting ? 50 : 100);
+    }
+}
+
+// Start typing effect after page load
+window.addEventListener('load', () => {
+    setTimeout(type, 1000);
+});
+
+// ===== TABS FUNCTIONALITY =====
+const tabBtns = document.querySelectorAll('.tab-btn');
+const tabContents = document.querySelectorAll('.tab-content');
+
+tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const targetTab = btn.getAttribute('data-tab');
         
-        if (!isClickInsideNav && sideMenu.classList.contains('active')) {
-            sideMenu.classList.remove('active');
-            hamburger.classList.remove('active');
-            body.classList.remove('menu-open');
+        // Remove active class from all buttons and contents
+        tabBtns.forEach(b => b.classList.remove('active'));
+        tabContents.forEach(c => c.classList.remove('active'));
+        
+        // Add active class to clicked button and corresponding content
+        btn.classList.add('active');
+        document.getElementById(targetTab).classList.add('active');
+    });
+});
+
+// ===== SCROLL ANIMATIONS =====
+const observerOptions = {
+    threshold: 0.2,
+    rootMargin: '0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+            
+            // Animate skill bars when they come into view
+            if (entry.target.querySelector('.technical-skills')) {
+                animateSkillBars();
+            }
+            
+            // Animate circular skills when they come into view
+            if (entry.target.querySelector('.professional-skills')) {
+                animateCircularSkills();
+            }
+            
+            // Unobserve after animation
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+// Observe all sections
+document.querySelectorAll('section > .container').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(50px)';
+    el.style.transition = 'all 0.8s ease';
+    observer.observe(el);
+});
+
+// ===== SKILL BARS ANIMATION =====
+let skillBarsAnimated = false;
+
+function animateSkillBars() {
+    if (skillBarsAnimated) return;
+    skillBarsAnimated = true;
+    
+    const skillFills = document.querySelectorAll('.skill-fill');
+    
+    skillFills.forEach((fill, index) => {
+        const progress = fill.getAttribute('data-progress');
+        setTimeout(() => {
+            fill.style.width = progress + '%';
+        }, index * 100);
+    });
+}
+
+// ===== CIRCULAR SKILLS ANIMATION =====
+let circularSkillsAnimated = false;
+
+function animateCircularSkills() {
+    if (circularSkillsAnimated) return;
+    circularSkillsAnimated = true;
+    
+    const circularSkills = document.querySelectorAll('.circular-skill');
+    
+    circularSkills.forEach((skill, index) => {
+        const percentage = parseInt(skill.getAttribute('data-percentage'));
+        let currentPercentage = 0;
+        
+        // Get the text element and store original label
+        const textElement = skill.querySelector('.circle-text');
+        const originalLabel = textElement.textContent.trim();
+        
+        // Start animation with delay based on index
+        setTimeout(() => {
+            const interval = setInterval(() => {
+                if (currentPercentage >= percentage) {
+                    clearInterval(interval);
+                } else {
+                    currentPercentage += 1;
+                    
+                    // Create gradient that fills based on percentage
+                    // Primary color from 0 to current percentage
+                    // Gray color from current percentage to 360
+                    skill.style.background = `conic-gradient(
+                        var(--primary) ${currentPercentage * 3.6}deg,
+                        rgba(255, 255, 255, 0.1) ${currentPercentage * 3.6}deg
+                    )`;
+                    
+                    // Update percentage text
+                    textElement.innerHTML = `${currentPercentage}%<br><small>${originalLabel}</small>`;
+                }
+            }, 15);
+        }, index * 200);
+    });
+}
+
+// ===== TRIGGER SKILLS ANIMATION ON MOUSE ENTER =====
+document.addEventListener('DOMContentLoaded', () => {
+    const skillsSection = document.getElementById('skills');
+    
+    if (skillsSection) {
+        skillsSection.addEventListener('mouseenter', () => {
+            if (!skillBarsAnimated) {
+                animateSkillBars();
+            }
+            if (!circularSkillsAnimated) {
+                animateCircularSkills();
+            }
+        });
+    }
+});
+
+// ===== NAVBAR SCROLL EFFECT =====
+let lastScroll = 0;
+const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    
+    if (currentScroll <= 0) {
+        navbar.style.boxShadow = 'none';
+    } else {
+        navbar.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.5)';
+    }
+    
+    // Hide/show navbar on scroll
+    if (currentScroll > lastScroll && currentScroll > 100) {
+        navbar.style.transform = 'translateY(-100%)';
+    } else {
+        navbar.style.transform = 'translateY(0)';
+    }
+    
+    lastScroll = currentScroll;
+});
+
+// ===== SMOOTH SCROLL WITH OFFSET =====
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            const offsetTop = targetElement.offsetTop - 80;
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
         }
     });
 });
-</script>
+
+// ===== ACTIVE NAV LINK ON SCROLL =====
+const sections = document.querySelectorAll('section[id]');
+
+function highlightNavLink() {
+    const scrollY = window.pageYOffset;
     
+    sections.forEach(section => {
+        const sectionHeight = section.offsetHeight;
+        const sectionTop = section.offsetTop - 100;
+        const sectionId = section.getAttribute('id');
+        
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${sectionId}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+    });
+}
+
+window.addEventListener('scroll', highlightNavLink);
+
+// ===== PARALLAX EFFECT =====
+window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const parallaxElements = document.querySelectorAll('.hero-image, .about-image');
     
+    parallaxElements.forEach(el => {
+        const speed = 0.5;
+        el.style.transform = `translateY(${scrolled * speed}px)`;
+    });
+});
+
+// ===== FORM SUBMISSION =====
+const contactForm = document.getElementById('contactForm');
+
+contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    // Get form data
+    const formData = new FormData(contactForm);
+    const data = Object.fromEntries(formData);
+    
+    // Show success message (you can replace this with actual form submission)
+    showNotification('Message sent successfully! 🎉', 'success');
+    
+    // Reset form
+    contactForm.reset();
+});
+
+// ===== NOTIFICATION SYSTEM =====
+function showNotification(message, type = 'success') {
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.className = `notification ${type}`;
+    notification.innerHTML = `
+        <i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}"></i>
+        <span>${message}</span>
+    `;
+    
+    // Add styles
+    Object.assign(notification.style, {
+        position: 'fixed',
+        top: '100px',
+        right: '20px',
+        background: type === 'success' ? 'var(--primary)' : 'var(--secondary)',
+        color: 'var(--dark)',
+        padding: '20px 30px',
+        borderRadius: '10px',
+        display: 'flex',
+        alignItems: 'center',
+        gap: '15px',
+        fontSize: '1rem',
+        fontWeight: '600',
+        zIndex: '10000',
+        boxShadow: '0 10px 30px rgba(0, 0, 0, 0.3)',
+        animation: 'slideInRight 0.5s ease',
+        maxWidth: '400px'
+    });
+    
+    document.body.appendChild(notification);
+    
+    // Remove after 3 seconds
+    setTimeout(() => {
+        notification.style.animation = 'slideOutRight 0.5s ease';
+        setTimeout(() => {
+            notification.remove();
+        }, 500);
+    }, 3000);
+}
+
+// Add notification animations
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes slideInRight {
+        from {
+            transform: translateX(400px);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    
+    @keyframes slideOutRight {
+        from {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        to {
+            transform: translateX(400px);
+            opacity: 0;
+        }
+    }
+`;
+document.head.appendChild(style);
+
+// ===== SCROLL TO TOP BUTTON =====
+const scrollTopBtn = document.createElement('button');
+scrollTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+scrollTopBtn.className = 'scroll-top-btn';
+
+Object.assign(scrollTopBtn.style, {
+    position: 'fixed',
+    bottom: '30px',
+    right: '30px',
+    width: '50px',
+    height: '50px',
+    borderRadius: '50%',
+    background: 'linear-gradient(45deg, var(--primary), var(--secondary))',
+    color: 'var(--dark)',
+    border: 'none',
+    fontSize: '1.2rem',
+    cursor: 'pointer',
+    display: 'none',
+    alignItems: 'center',
+    justifyContent: 'center',
+    zIndex: '1000',
+    transition: 'all 0.3s ease',
+    boxShadow: '0 5px 20px rgba(0, 245, 255, 0.4)'
+});
+
+document.body.appendChild(scrollTopBtn);
+
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+        scrollTopBtn.style.display = 'flex';
+    } else {
+        scrollTopBtn.style.display = 'none';
+    }
+});
+
+scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+scrollTopBtn.addEventListener('mouseenter', () => {
+    scrollTopBtn.style.transform = 'translateY(-5px) scale(1.1)';
+});
+
+scrollTopBtn.addEventListener('mouseleave', () => {
+    scrollTopBtn.style.transform = 'translateY(0) scale(1)';
+});
+
+// ===== IMAGE LAZY LOADING =====
+const images = document.querySelectorAll('img');
+const imageObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const img = entry.target;
+            img.style.opacity = '0';
+            img.style.transition = 'opacity 0.5s ease';
+            
+            setTimeout(() => {
+                img.style.opacity = '1';
+            }, 100);
+            
+            observer.unobserve(img);
+        }
+    });
+});
+
+images.forEach(img => imageObserver.observe(img));
+
+// ===== ANIMATE ON SCROLL (AOS) ALTERNATIVE =====
+const animateElements = document.querySelectorAll('[data-aos]');
+
+const animateObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const delay = entry.target.getAttribute('data-aos-delay') || 0;
+            
+            setTimeout(() => {
+                entry.target.classList.add('aos-animate');
+            }, delay);
+            
+            animateObserver.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.1
+});
+
+animateElements.forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(50px)';
+    el.style.transition = 'all 0.8s ease';
+    animateObserver.observe(el);
+});
+
+// Add AOS animation class styles
+const aosStyle = document.createElement('style');
+aosStyle.textContent = `
+    .aos-animate {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+`;
+document.head.appendChild(aosStyle);
+
+// ===== PORTFOLIO CARD TILT EFFECT =====
+const portfolioCards = document.querySelectorAll('.portfolio-card');
+
+portfolioCards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        const rotateX = (y - centerY) / 10;
+        const rotateY = (centerX - x) / 10;
+        
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+    });
+    
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+    });
+});
+
+// ===== SERVICE CARD TILT EFFECT =====
+const serviceCards = document.querySelectorAll('.service-card');
+
+serviceCards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        const rotateX = (y - centerY) / 15;
+        const rotateY = (centerX - x) / 15;
+        
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
+    });
+    
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+    });
+});
+
+// ===== PRELOADER =====
+window.addEventListener('load', () => {
+    const preloader = document.createElement('div');
+    preloader.className = 'preloader';
+    preloader.innerHTML = `
+        <div class="loader">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+    `;
+    
+    Object.assign(preloader.style, {
+        position: 'fixed',
+        top: '0',
+        left: '0',
+        width: '100%',
+        height: '100%',
+        background: 'var(--dark)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        zIndex: '99999',
+        transition: 'opacity 0.5s ease'
+    });
+    
+    const loaderStyle = document.createElement('style');
+    loaderStyle.textContent = `
+        .loader {
+            text-align: center;
+        }
+        
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 5px solid rgba(0, 245, 255, 0.2);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .loader p {
+            color: var(--primary);
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+    `;
+    document.head.appendChild(loaderStyle);
+    
+    // Remove preloader after a short delay
+    setTimeout(() => {
+        preloader.style.opacity = '0';
+        setTimeout(() => {
+            preloader.remove();
+        }, 500);
+    }, 1000);
+});
+
+// ===== CONSOLE GREETING =====
+console.log('%c👋 Hello Developer!', 'color: #00f5ff; font-size: 24px; font-weight: bold;');
+console.log('%cWelcome to Yuvasri\'s Portfolio', 'color: #ff00ea; font-size: 16px;');
+console.log('%cLike what you see? Let\'s collaborate!', 'color: #ffed4e; font-size: 14px;');
+console.log('%c📧 yuvas5466@gmail.com', 'color: #8892b0; font-size: 12px;');
+
+// ===== MOUSE TRAIL EFFECT =====
+const trail = [];
+const trailLength = 20;
+
+document.addEventListener('mousemove', (e) => {
+    trail.push({ x: e.clientX, y: e.clientY });
+    
+    if (trail.length > trailLength) {
+        trail.shift();
+    }
+    
+    // Create trail element
+    const trailDot = document.createElement('div');
+    trailDot.className = 'trail-dot';
+    Object.assign(trailDot.style, {
+        position: 'fixed',
+        width: '5px',
+        height: '5px',
+        borderRadius: '50%',
+        background: 'var(--primary)',
+        pointerEvents: 'none',
+        zIndex: '9998',
+        left: e.clientX + 'px',
+        top: e.clientY + 'px',
+        opacity: '0.6',
+        transition: 'all 0.3s ease'
+    });
+    
+    document.body.appendChild(trailDot);
+    
+    setTimeout(() => {
+        trailDot.style.opacity = '0';
+        trailDot.style.transform = 'scale(0)';
+        setTimeout(() => trailDot.remove(), 300);
+    }, 100);
+});
+
+// ===== INITIALIZE EVERYTHING =====
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('Portfolio initialized! 🚀');
+    
+    // Set initial states
+    highlightNavLink();
+    
+    // Trigger initial animations
+    setTimeout(() => {
+        const heroElements = document.querySelectorAll('.hero-section [data-aos]');
+        heroElements.forEach(el => el.classList.add('aos-animate'));
+    }, 500);
+});
+    </script>
 </body>
 </html>
-
-
-
-
