@@ -723,7 +723,7 @@ function animateCircularSkills() {
     
     circularSkills.forEach((skill, index) => {
         const percentage = parseInt(skill.getAttribute('data-percentage'));
-        let currentPercentage = 0;
+        let currentPercentage = ;
         
         // Get the text element and store original label
         const textElement = skill.querySelector('.circle-text');
@@ -755,7 +755,7 @@ function animateCircularSkills() {
 
 // ===== TRIGGER SKILLS ANIMATION ON MOUSE ENTER =====
 document.addEventListener('DOMContentLoaded', () => {
-    const skillsSection = document.getElementById('skills');
+    const skillsSection = document.getElementById('skill');
     
     if (skillsSection) {
         skillsSection.addEventListener('mouseenter', () => {
@@ -1212,6 +1212,7 @@ document.addEventListener('DOMContentLoaded', () => {
     </script>
 </body>
 </html>
+
 
 
 
