@@ -757,14 +757,6 @@ function animateCircularSkills() {
 document.addEventListener('DOMContentLoaded', () => {
     const skillsSection = document.getElementById('skills');
     
-    // Initialize circular skills with 0%
-    const circularSkills = document.querySelectorAll('.circular-skill');
-    circularSkills.forEach(skill => {
-        const textElement = skill.querySelector('.circle-text');
-        const originalLabel = textElement.textContent.trim();
-        textElement.innerHTML = `0%<br><small>${originalLabel}</small>`;
-    });
-    
     if (skillsSection) {
         skillsSection.addEventListener('mouseenter', () => {
             if (!skillBarsAnimated) {
@@ -1220,6 +1212,7 @@ document.addEventListener('DOMContentLoaded', () => {
     </script>
 </body>
 </html>
+
 
 
 
