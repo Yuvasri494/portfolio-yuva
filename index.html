@@ -798,11 +798,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         const targetId = this.getAttribute('href');
         
-        if (targetId === '#') return;
+        if (targetId === '#' || targetId === '#home') {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            return;
+        }
         
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
-            const offsetTop = targetElement.offsetTop - 80;
+            const navbarHeight = document.querySelector('.navbar').offsetHeight;
+            const offsetTop = targetElement.offsetTop - navbarHeight - 20;
+            
             window.scrollTo({
                 top: offsetTop,
                 behavior: 'smooth'
@@ -1204,4 +1212,5 @@ document.addEventListener('DOMContentLoaded', () => {
     </script>
 </body>
 </html>
+
 
